@@ -1,0 +1,14 @@
+(defwindow example
+  :monitor 0  ;; Asegúrate de que sea el monitor correcto
+  :geometry (geometry :x "32%"
+                      :y "65px"
+                      :width "25%"
+                      :height "450px"
+                      :anchor "top center")
+  :stacking "bg"  ;; Asegura que esté en el fondo
+  ;; :reserve (struts :distance "60px" :side "top")  ;; Reserva espacio en la parte superior
+  :windowtype "desktop"  ;; Defínelo como una ventana tipo dock
+  :wm-ignore false  ;; No lo ignores en el gestor de ventanas
+  "Saludo_____"
+)
+
