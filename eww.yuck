@@ -1,18 +1,64 @@
 (defwindow example
-        :monitor 0  
-        :geometry (geometry 
-                        :x "32%"
-                        :y "65px"
-                        :width "25%"
-                        :height "450px"
-                        :anchor "top center"
-                        )
-        :stacking "bg"  
-        :windowtype "desktop"  
-        :wm-ignore false  
-        "Saludo_____"
+    :monitor 0  
+    :geometry (geometry 
+                :x "32%"
+                :y "65px"
+                :width "25%"
+                :height "450px"
+                :anchor "top center"
+              )
+    :stacking "bg"  
+    :windowtype "desktop"  
+    :wm-ignore false  
+    (box
+        :spacing 0
+        :orientation "vertical"
+        (label
+            :text "${formattime(EWW_TIME, '%H:%M')}"
+            :valign "start"
+            :halign "right"
+            :width 300
+            :height 50
+            :tooltip "Reloj digital"
+            :font "Inconsolata"
+            :size 30
+            :color "#ff0000"
         )
-
+        (label
+            :text "${formattime(EWW_TIME, '%d/%m/%Y')}"
+            :valign "start"
+            :halign "center"
+            :width 300
+            :height 50
+            :visible true
+            :tooltip "Fecha actual"
+            :font "Noto Sans, 14, normal"
+            :color "#FFFFF"
+        )
+        (label
+            :text "RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
+            :valign "start"
+            :halign "center"
+            :width 300
+            :height 50
+            :visible true
+            :tooltip "Uso de RAM"
+            :font "Noto Sans, 14, normal"
+            :color "#FFFFF"
+        )
+        (label
+            :text "Batería: ${EWW_BATTERY.main.capacity}%"
+            :valign "start"
+            :halign "center"
+            :width 300
+            :height 50
+            :visible true
+            :tooltip "Estado de la batería"
+            :font "Noto Sans, 14, normal"
+            :color "#ffa500"
+        )
+    )
+)
 
 
 ;;-------------Comentario-------------;;
