@@ -34,7 +34,7 @@
         )
         (label
             :class "date-label"
-            :text "RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
+            :text "RAM: ${round(EWW_RAM.used_mem_perc, 0)}%   礪 閭 󰐰  󰾆   "
             :valign "start"
             :halign "center"
             :width 300
