@@ -14,28 +14,26 @@
         :spacing 0
         :orientation "vertical"
         (label
-            :text "${formattime(EWW_TIME, '%H:%M')}"
+            :class "time-label"
+            :text "${formattime(EWW_TIME, '%H:%M')} 󱑒 "
             :valign "start"
             :halign "right"
             :width 300
             :height 50
             :tooltip "Reloj digital"
-            :font "Inconsolata"
-            :size 30
-            :color "#ff0000"
         )
         (label
-            :text "${formattime(EWW_TIME, '%d/%m/%Y')}"
+            :class "date-label"
+            :text "${formattime(EWW_TIME, '%d/%m/%Y')} 󰃭 "
             :valign "start"
             :halign "center"
             :width 300
             :height 50
             :visible true
             :tooltip "Fecha actual"
-            :font "Noto Sans, 14, normal"
-            :color "#FFFFF"
         )
         (label
+            :class "date-label"
             :text "RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
             :valign "start"
             :halign "center"
@@ -43,19 +41,6 @@
             :height 50
             :visible true
             :tooltip "Uso de RAM"
-            :font "Noto Sans, 14, normal"
-            :color "#FFFFF"
-        )
-        (label
-            :text "Batería: ${EWW_BATTERY.main.capacity}%"
-            :valign "start"
-            :halign "center"
-            :width 300
-            :height 50
-            :visible true
-            :tooltip "Estado de la batería"
-            :font "Noto Sans, 14, normal"
-            :color "#ffa500"
         )
     )
 )
