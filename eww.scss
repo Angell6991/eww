@@ -1,18 +1,19 @@
 .example {
   border-radius: 10px; /* Ajusta el valor para cambiar el radio de los bordes */
-  background-color: rgba(29, 29, 29, 0.7); /* Color con 80% de opacidad */
-  padding: 40px;
+  background-color: rgba(29, 29, 29, 0.7); /* Color con 30% de opacidad */
+  padding: 20px;
   // color: #D8DEE9;
 }
 
 .left-box {
-  background-color: rgba(70, 130, 180, 0.5); /* Fondo azul con 50% de opacidad */
+  background-color: rgba(29, 29, 29, 0); /* Fondo azul con 100% de opacidad */
   padding: 10px;
   border-radius: 10px; /* Bordes redondeados */
 }
 
 .right-box {
-  background-color: rgba(255, 99, 71, 0.5); /* Fondo rojo con 50% de opacidad */
+  // background-color: rgba(90, 237, 163, 1); /* Fondo rojo con 0% de opacidad verde */
+  background-color: rgba(0, 204, 222, 1); /* Fondo rojo con 0% de opacidad azul */
   padding: 10px;
   border-radius: 10px; /* Bordes redondeados */
 }
@@ -30,8 +31,8 @@
 }
 
 .ram-label {
-  font-size: 20px;
-  color: #353535;
+  font-size: 21px;
+  color: #1d1d1d;
   font-family: "Inconsolata Nerd Font";
 }
 

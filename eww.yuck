@@ -1,10 +1,10 @@
 (defwindow example
     :monitor 0
     :geometry (geometry
-              :x "0%"
-              :y "65px"
+              :x "30%"
+              :y "30px"
               :width "25%"
-              :height "450px"
+              :height "50px"
               :anchor "top center")
     :stacking "bg"
     :windowtype "desktop"
@@ -18,20 +18,20 @@
             (label
                 :class "time-label"
                 :text "󱑒 ${formattime(EWW_TIME, '%H:%M')}"
-                :valign "start"
-                :halign "left"
-                :width 300
-                :height 50
+                ;; :valign "start"
+                ;; :halign "left"
+                ;; :width 300
+                ;; :height 50
                 :tooltip "Reloj digital"
             )
             (label
                 :class "date-label"
                 :text "󰃭 ${formattime(EWW_TIME, '%d/%m/%Y')}"
-                :valign "start"
-                :halign "left"
-                :width 300
-                :height 50
-                :visible true
+                ;; :valign "start"
+                ;; :halign "left"
+                ;; :width 300
+                ;; :height 50
+                ;; :visible true
                 :tooltip "Fecha actual"
             )
         )
@@ -41,11 +41,11 @@
             (label
                 :class "ram-label"
                 :text "RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
-                :valign "start"
-                :halign "right"
-                :width 300
-                :height 50
-                :visible true
+                ;; :valign "start"
+                ;; :halign "right"
+                ;; :width 300
+                ;; :height 50
+                ;; :visible true
                 :tooltip "Uso de RAM"
             )
         )
