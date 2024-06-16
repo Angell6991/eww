@@ -31,13 +31,17 @@
             :orientation "vertical"
             (label
                 :class "battery-label"
-                :text "(${EWW_BATTERY['BAT0'].status})   ${EWW_BATTERY['BAT0'].capacity}%"
+                :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : ' '}   ${EWW_BATTERY['BAT0'].capacity}%"
                 ;; :tooltip "Estado de la Batería"
             )
             (label
-                :class "ram-label"
+                :class "ram-label" 
                 :text "  RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
                 ;; :tooltip "Uso de RAM"
+            )
+            (label
+                :class "CPU-inf"
+                :text " CPU: ${round(EWW_CPU.avg, 0)}%"
             )
         )
     )
