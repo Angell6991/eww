@@ -18,35 +18,26 @@
             (label
                 :class "time-label"
                 :text "󱑒 ${formattime(EWW_TIME, '%H:%M')}"
-                ;; :valign "start"
-                ;; :halign "left"
-                ;; :width 300
-                ;; :height 50
-                :tooltip "Reloj digital"
+                ;; :tooltip "Reloj digital"
             )
             (label
                 :class "date-label"
                 :text "󰃭 ${formattime(EWW_TIME, '%d/%m/%Y')}"
-                ;; :valign "start"
-                ;; :halign "left"
-                ;; :width 300
-                ;; :height 50
-                ;; :visible true
-                :tooltip "Fecha actual"
+                ;; :tooltip "Fecha actual"
             )
         )
         (box
             :class "right-box"
             :orientation "vertical"
             (label
+                :class "battery-label"
+                :text "(${EWW_BATTERY['BAT0'].status})   ${EWW_BATTERY['BAT0'].capacity}%"
+                ;; :tooltip "Estado de la Batería"
+            )
+            (label
                 :class "ram-label"
                 :text "RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
-                ;; :valign "start"
-                ;; :halign "right"
-                ;; :width 300
-                ;; :height 50
-                ;; :visible true
-                :tooltip "Uso de RAM"
+                ;; :tooltip "Uso de RAM"
             )
         )
     )
