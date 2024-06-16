@@ -31,7 +31,11 @@
             :orientation "vertical"
             (label
                 :class "battery-label"
-                :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : ' '}   ${EWW_BATTERY['BAT0'].capacity}%"
+                :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' 
+                        : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' 
+                        : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' 
+                        : EWW_BATTERY['BAT0'].status}   ${EWW_BATTERY['BAT0'].capacity}%"
+                ;; :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : ' '}   ${EWW_BATTERY['BAT0'].capacity}%"
                 ;; :tooltip "Estado de la Batería"
             )
             (label
@@ -41,7 +45,7 @@
             )
             (label
                 :class "CPU-inf"
-                :text " CPU: ${round(EWW_CPU.avg, 0)}%"
+                :text "  CPU: ${round(EWW_CPU.avg, 0)}%"
             )
         )
     )
