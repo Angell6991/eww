@@ -37,16 +37,28 @@
 }
 
 .ram-label {
-  font-size: 18px;
+  font-size: 17px;
   color: #1d1d1d;
   font-family: "Inconsolata Nerd Font";
 }
 
 .CPU-inf {
-  font-size: 18px;
+  font-size: 17px;
   color: #1d1d1d;
   font-family: "Inconsolata Nerd Font";
 }
 
+// Visor escritorio
+.desk-box {
+  background-color: rgba(29, 29, 29, 1); 
+  padding: 0px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.desk-test {
+  font-size: 17px;
+  color: #00CCDE;
+  font-family: "Inconsolata Nerd Font";
+}
 
 

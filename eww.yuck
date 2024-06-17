@@ -1,3 +1,6 @@
+(defpoll bspwm_desktops :interval "2s"  "bash ~/.config/eww/script.sh")
+
+
 (defwindow example
     :monitor 0
     :geometry (geometry
@@ -43,6 +46,14 @@
             (label
                 :class "CPU-inf"
                 :text " CPU:${round(EWW_CPU.avg, 0)}% | 󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
+            )
+            (box
+                :class "desk-box"
+                :orientation "horizontal"
+                (label
+                    :class "desk-test"
+                    :text "${bspwm_desktops}"
+                )
             )
         )
     )
