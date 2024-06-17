@@ -42,7 +42,7 @@
             )
             (label
                 :class "CPU-inf"
-                :text "  CPU: ${round(EWW_CPU.avg, 0)}%"
+                :text " CPU:${round(EWW_CPU.avg, 0)}% | 󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
             )
         )
     )
