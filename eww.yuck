@@ -1,14 +1,14 @@
-(defpoll bspwm_desktops :interval "2s"  "bash ~/.config/eww/script.sh")
+(defpoll var_desktops :interval "2s"  "bash ~/.config/eww/script.sh")
 
 
 (defwindow example
     :monitor 0
     :geometry (geometry
-              :x "30%"
+              :x "2%"
               :y "30px"
               :width "25%"
               :height "50px"
-              :anchor "top center")
+              :anchor "top right")
     :stacking "bg"
     :windowtype "desktop"
     :wm-ignore false
@@ -52,7 +52,7 @@
                 :orientation "horizontal"
                 (label
                     :class "desk-test"
-                    :text "${bspwm_desktops}"
+                    :text "${var_desktops}"
                 )
             )
         )

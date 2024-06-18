@@ -27,3 +27,8 @@ done
 # Imprimir el estado formateado
 echo $status
 
+
+# intalar  sudo pacman -S jq 
+
+
+
