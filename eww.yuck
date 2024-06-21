@@ -15,9 +15,11 @@
     (box
         :spacing 0
         :orientation "horizontal"
+        :spacing "10"
         (box
             :class "left-box"
             :orientation "vertical"
+            :spacing "0"
             (label
                 :class "time-label"
                 :text "󱑒 ${formattime(EWW_TIME, '%H:%M')}"
@@ -32,6 +34,7 @@
         (box
             :class "right-box"
             :orientation "vertical"
+            :spacing "0"
             (label
                 :class "battery-label"
                 :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status}   ${EWW_BATTERY['BAT0'].capacity}%"
