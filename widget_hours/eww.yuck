@@ -1,7 +1,7 @@
-(defpoll var_desktops :interval "2s"  "bash ~/.config/eww/script.sh")
+(defpoll var_desktops :interval "2s"  "bash ~/.config/eww/widget_hours/scripts/workspaces.sh")
 
 
-(defwindow example
+(defwindow widget_hours
     :monitor 0
     :geometry (geometry
               :x "2%"
