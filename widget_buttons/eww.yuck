@@ -1,0 +1,84 @@
+(defwidget app-menu []
+    (box 
+        :orientation "v" 
+        :halign "center" 
+        :valign "end" 
+        :class "box-apps"
+        :spacing "10"
+        (button :onclick "bash ~/.config/eww/widget_buttons/scripts/open_metric3.sh" 
+            :class "button-app"
+            :tooltip "Metric3"
+            (label
+                :class "metric3"
+                :text " "
+            )
+        )
+    )
+)
+
+
+
+(defwidget power-menu []
+    (box 
+        :orientation "v" 
+        :halign "center" 
+        :valign "end" 
+        :class "box-power"
+        :spacing "10"
+        (button :onclick "hyprctl dispatch exit 0" 
+            :class "button-power"
+            :tooltip "close secion"
+            (label
+                :class "close-secion"
+                :text "󰈆 "
+            )
+        )
+        (button :onclick "systemctl reboot" 
+            :class "button-power"
+            :tooltip "reboot"
+            (label 
+                :class "reboot"
+                :text " "
+            )
+        )
+        (button :onclick "systemctl suspend" 
+            :class "button-power"
+            :tooltip "suspend"
+            (label 
+                :class "suspend"
+                :text "󰤄 "
+            )
+        )
+        (button :onclick "systemctl poweroff" 
+            :class "button-power"
+            :tooltip "poweroff"
+            (label 
+                :class "poweroff"
+                :text "⏻ "
+            )
+        )
+    )
+)
+
+
+
+(defwindow bar-window 
+    :monitor 0 
+    :class "bar-window"
+    :stacking "bg" 
+    :geometry 
+    (geometry 
+        :x "2%" 
+        :y "30px" 
+        :width "5%" 
+        :height "30px"
+        :anchor "bottom left"
+    )
+    (box
+        :orientation "v" 
+        :spacing "45"
+        (app-menu)
+        (power-menu)
+    )
+)
+
