@@ -5,6 +5,15 @@
         :valign "end" 
         :class "box-apps"
         :spacing "10"
+        (button :onclick "brave --incognito https://github.com/Angell6991 &" 
+            :onrightclick "brave https://github.com/Angell6991 &" 
+            :class "button-app"
+            :tooltip "GitHub/Angell6991"
+            (label
+                :class "git_hub"
+            :text " "
+            )
+        )
         (button :onclick "bash ~/.config/eww/widget_buttons/scripts/open_metric3.sh" 
             :class "button-app"
             :tooltip "Metric3"
