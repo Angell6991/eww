@@ -5,8 +5,8 @@
         :valign "end" 
         :class "box-apps"
         :spacing "10"
-        (button :onclick "brave --incognito https://github.com/Angell6991 &" 
-            :onrightclick "brave https://github.com/Angell6991 &" 
+        (button :onclick "firefox --private-window https://github.com/Angell6991 &" 
+            :onrightclick "firefox https://github.com/Angell6991 &" 
             :class "button-app"
             :tooltip "GitHub/Angell6991"
             (label
