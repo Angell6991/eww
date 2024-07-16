@@ -6,7 +6,7 @@
     :geometry (geometry
               :x "2%"
               :y "30px"
-              :width "40%"
+              :width "37%"
               :height "50px"
               :anchor "top right")
     :stacking "bg"
@@ -23,12 +23,22 @@
             (box
                 :class "box_clock"
                 :orentation "horizontal"
-                :spacing "15"
+                :spacing "5"
+                ;;:spacing "15"
+                :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
+                :halign "center"
                 (box
                     :class "box_clock_box"
                     (label
                         :class "time-label"
                         :text "${formattime(EWW_TIME, '%H')}"
+                    )
+                )
+                (box
+                    (label
+                        :class "clock-dot"
+                        :spacing "0"
+                        :text ":"
                     )
                 )
                 (box
