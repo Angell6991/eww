@@ -6,7 +6,7 @@
     :geometry (geometry
               :x "2%"
               :y "30px"
-              :width "40%"
+              :width "25%"
               :height "50px"
               :anchor "top right")
     :stacking "bg"
@@ -20,24 +20,10 @@
             :class "left-box"
             :orientation "vertical"
             :spacing "0"
-            (box
-                :class "box_clock"
-                :orentation "horizontal"
-                :spacing "15"
-                (box
-                    :class "box_clock_box"
-                    (label
-                        :class "time-label"
-                        :text "${formattime(EWW_TIME, '%H')}"
-                    )
-                )
-                (box
-                    :class "box_clock_box"
-                    (label
-                        :class "time-label"
-                        :text "${formattime(EWW_TIME, '%M')}"
-                    )
-                )
+            (label
+                :class "time-label"
+                :text "󱑒 ${formattime(EWW_TIME, '%H:%M')}"
+                ;; :tooltip "Reloj digital"
             )
             (label
                 :class "date-label"

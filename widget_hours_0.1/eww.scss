@@ -1,6 +1,6 @@
 .widget_hours {
   border-radius: 10px; /* Ajusta el valor para cambiar el radio de los bordes */
-  background-color: rgba(29, 29, 29, 0.5); /* Color con 30% de opacidad */
+  background-color: rgba(29, 29, 29, 0.7); /* Color con 30% de opacidad */
   padding: 20px;
   // color: #D8DEE9;
 }
@@ -19,7 +19,7 @@
 .right-box {
   // background-color: rgba(90, 237, 163, 1); /* Fondo rojo con 0% de opacidad verde */
   background-color: rgba(0, 204, 222, 1); /* Fondo rojo con 0% de opacidad azul */
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -28,21 +28,11 @@
 ////      widget_box_left     ////
 //////////////////////////////////
 
-.box_clock {
-  background-color: rgba(29, 29, 29, 0); /* Color con 30% de opacidad */
-}
-
-.box_clock_box {
-  background-color: #161616; 
-  border-radius: 10px;
-  padding: 10px;
-}
-
 .time-label {
-  font-size: 50px;        
+  font-size: 60px;        
   color: #5AEDA3;           
   // font-family: "Inconsolata Nerd Font";
-  font-family: "Digital Dismay";
+  font-family: "Inconsolata NF";
 }
 
 .date-label {
