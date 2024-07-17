@@ -148,14 +148,26 @@
     :windowtype "desktop"
     :wm-ignore false
     (box
-        :orientation "v"
+        :orientation "h"
         :halign "center"
         :space-evenly "false"
         :spacing "20"
-        (clock-data)
-        (data-day)
-        (inf-system)
-        (work-station)
+        (box
+            :orientation "v"
+            :halign "center"
+            :space-evenly "false"
+            :spacing "20"
+            (clock-data)
+            (work-station)
+        )
+        (box
+            :orientation "v"
+            :halign "center"
+            :space-evenly "false"
+            :spacing "20"
+            (data-day)
+            (inf-system)
+        )
     )
 )
 
