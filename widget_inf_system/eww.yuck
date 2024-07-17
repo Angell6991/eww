@@ -16,7 +16,14 @@
                 :class "box-inf-system_01"
                 (label
                  :class "CPU-inf"
-                 :text " CPU:${round(EWW_CPU.avg, 0)}% | 󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
+                 :text " CPU:${round(EWW_CPU.avg, 0)}%"
+                )
+            )
+            (box
+                :class "box-inf-system_01"
+                (label
+                 :class "CPU-inf-temp"
+                 :text "󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
                 )
             )
             (box

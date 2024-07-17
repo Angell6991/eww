@@ -1,5 +1,5 @@
 .widget_inf {
-  background-color: rgba(28, 28, 28, 0); /* Color con 30% de opacidad */
+  background-color: rgba(28, 28, 28, 0.5); /* Color con 30% de opacidad */
   padding: 0px;
 }
 
@@ -37,6 +37,13 @@
 .CPU-inf {
   font-size: 17px;
   color: #9821D0;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+}
+
+.CPU-inf-temp {
+  font-size: 17px;
+  color: #ff44a0;
   // font-family: "Inconsolata Nerd Font";
   font-family: "Inconsolata NF";
 }
