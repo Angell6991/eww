@@ -1,94 +1,135 @@
 .widget_hours {
-  border-radius: 10px; /* Ajusta el valor para cambiar el radio de los bordes */
-  background-color: rgba(29, 29, 29, 0.5); /* Color con 30% de opacidad */
-  padding: 20px;
-  // color: #D8DEE9;
+  background-color: rgba(28, 28, 28, 0); /* Color con 30% de opacidad */
+  padding: 0px;
 }
 
 
 //////////////////////////////////
-////    box_left_and_right    ////
-//////////////////////////////////
-
-.left-box {
-  background-color: rgba(29, 29, 29, 0); /* Fondo azul con 100% de opacidad */
-  padding: 10px;
-  border-radius: 10px; /* Bordes redondeados */
-}
-
-.right-box {
-  // background-color: rgba(90, 237, 163, 1); /* Fondo rojo con 0% de opacidad verde */
-  background-color: rgba(0, 204, 222, 1); /* Fondo rojo con 0% de opacidad azul */
-  padding: 10px;
-  border-radius: 10px; /* Bordes redondeados */
-}
-
-
-//////////////////////////////////
-////      widget_box_left     ////
+////    widget_clock_data     ////
 //////////////////////////////////
 
 .box_clock {
-  background-color: rgba(29, 29, 29, 0); /* Color con 30% de opacidad */
+  background-color: rgba(29, 29, 29, 0.7); /* Color con 30% de opacidad */
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .box_clock_box {
   background-color: #161616; 
   border-radius: 10px;
-  padding: 7px;
+  padding: 10px;
 }
 
 .clock-dot {
-  font-size: 50px;        
+  font-size: 55px;        
   color: #B8B8B8;           
   // font-family: "Inconsolata Nerd Font";
   font-family: "Digital Dismay";
 }
 
 .time-label {
-  font-size: 50px;        
+  font-size: 55px;        
   color: #5AEDA3;           
   // font-family: "Inconsolata Nerd Font";
   font-family: "Digital Dismay";
 }
 
-.date-label {
+
+//////////////////////////////////
+////     widget_data_day      ////
+//////////////////////////////////
+
+.box-day-contener {
+  background-color: rgba(29, 29, 29, 0.7); /* Color con 30% de opacidad */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box-day-logo {
+  background-color: rgba(29, 29, 29, 0); /* Color con 30% de opacidad */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box-day {
+  background-color: #161616; 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.date-label-logo {
   font-size: 22px;
   color: #B8B8B8;
   // font-family: "Inconsolata Nerd Font";
   font-family: "Inconsolata NF";
 }
 
+.date-label-separ {
+  font-size: 25px;
+  color: #B8B8B8;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Digital Dismay";
+}
+
+.date-label {
+  font-size: 25px;
+  color: #ff44a0;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Digital Dismay";
+}
+
 
 //////////////////////////////////
-////      widget_box_right    ////
+////    widget_inf_system     ////
 //////////////////////////////////
+
+.box-inf-system {
+  background-color: rgba(29, 29, 29, 0.7); 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box-inf-system_01 {
+  background-color: #161616; 
+  border-radius: 10px;
+  padding: 10px;
+}
 
 .battery-label {
-  font-size: 22px;
-  color: #1d1d1d;
+  font-size: 25px;
+  color: #9821D0;
   // font-family: "Inconsolata Nerd Font";
   font-family: "Inconsolata NF";
 }
 
 .ram-label {
-  font-size: 17px;
-  color: #1d1d1d;
+  font-size: 18px;
+  color: #B8B8B8;
   // font-family: "Inconsolata Nerd Font";
   font-family: "Inconsolata NF";
 }
 
 .CPU-inf {
-  font-size: 17px;
-  color: #1d1d1d;
+  font-size: 18px;
+  color: #9821D0;
   // font-family: "Inconsolata Nerd Font";
   font-family: "Inconsolata NF";
 }
 
+
+//////////////////////////////////
 ////-----View_workspaces------////
+//////////////////////////////////
+
 .desk-box {
+  background-color: rgba(29, 29, 29, 0.7); 
+  padding: 5px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.desk-box_01 {
   background-color: rgba(29, 29, 29, 1); 
-  padding: 0px;
+  padding: 8px;
   border-radius: 10px; /* Bordes redondeados */
 }
 

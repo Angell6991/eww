@@ -1,64 +1,103 @@
 (defpoll var_desktops :interval "2s"  "bash ~/.config/eww/widget_hours/scripts/workspaces.sh")
 
 
-(defwindow widget_hours
-    :monitor 0
-    :geometry (geometry
-              :x "2%"
-              :y "30px"
-              :width "37%"
-              :height "50px"
-              :anchor "top right")
-    :stacking "bg"
-    :windowtype "desktop"
-    :wm-ignore false
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;---------------def_widgets---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defwidget clock-data []
     (box
-        :spacing 0
+        :class "box_clock"
         :orientation "horizontal"
-        :spacing "10"
+        :spacing "0"
+        ;;:spacing "15"
+        :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
+        :halign "center"
         (box
-            :class "left-box"
-            :orientation "vertical"
-            :spacing "0"
-            (box
-                :class "box_clock"
-                :orentation "horizontal"
-                :spacing "5"
-                ;;:spacing "15"
-                :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
-                :halign "center"
-                (box
-                    :class "box_clock_box"
-                    (label
-                        :class "time-label"
-                        :text "${formattime(EWW_TIME, '%H')}"
-                    )
-                )
-                (box
-                    (label
-                        :class "clock-dot"
-                        :spacing "0"
-                        :text ":"
-                    )
-                )
-                (box
-                    :class "box_clock_box"
-                    (label
-                        :class "time-label"
-                        :text "${formattime(EWW_TIME, '%M')}"
-                    )
-                )
-            )
+            :class "box_clock_box"
             (label
-                :class "date-label"
-                :text "󰃭 ${formattime(EWW_TIME, '%d/%m/%Y')}"
-                ;; :tooltip "Fecha actual"
+                :class "time-label"
+                :text "${formattime(EWW_TIME, '%H')}"
             )
         )
         (box
-            :class "right-box"
+            (label
+                :class "clock-dot"
+                :spacing "0"
+                :text ":"
+            )
+        )
+        (box
+            :class "box_clock_box"
+            (label
+                :class "time-label"
+                :text "${formattime(EWW_TIME, '%M')}"
+            )
+        )
+    )
+)
+
+
+(defwidget data-day []
+    (box
+        :class "box-day-contener"
+        :orientation "horizontal"
+        :space-evenly "false"
+        :halign "center"
+        :spacing "3"
+        (box 
+            :class "box-day-logo"
+            (label
+                :class "date-label-logo"
+                :text "󰃭 "
+            )
+        )
+        (box 
+            :class "box-day"
+            (label
+                :class "date-label"
+                :text "${formattime(EWW_TIME, '%d')}"
+            )
+        )
+        (box 
+            :class "box-day-separ"
+            (label
+                :class "date-label-logo"
+                :text "|"
+            )
+        )       
+        (box 
+            :class "box-day"
+            (label
+                :class "date-label"
+                :text "${formattime(EWW_TIME, '%m')}"
+            )
+        )
+        (box 
+            :class "box-day-separ"
+            (label
+                :class "date-label-logo"
+                :text "|"
+            )
+        )    
+        (box 
+            :class "box-day"
+            (label
+                :class "date-label"
+                :text "${formattime(EWW_TIME, '%Y')}"
+            )
+        )
+    )
+)
+
+
+(defwidget inf-system []
+    (box
+        :class "box-inf-system"
+        :spacing "0"
+        (box
+            :class "box-inf-system_01"
             :orientation "vertical"
-            :spacing "0"
+            :spacing "5"
             (label
                 :class "battery-label"
                 :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status}   ${EWW_BATTERY['BAT0'].capacity}%"
@@ -74,18 +113,51 @@
                 :class "CPU-inf"
                 :text " CPU:${round(EWW_CPU.avg, 0)}% | 󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
             )
-            (box
-                :class "desk-box"
-                :orientation "horizontal"
-                (label
-                    :class "desk-test"
-                    :text "${var_desktops}"
-                )
+        )
+    )
+)
+
+
+(defwidget work-station []
+    (box
+        :class "desk-box"
+        (box
+            :class "desk-box_01"
+            :orientation "horizontal"
+            (label
+                :class "desk-test"
+                :text "${var_desktops}"
             )
         )
     )
 )
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;-------------------def_var---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defwindow widget_hours
+    :monitor 0
+    :geometry (geometry
+              :x "2%"
+              :y "30px"
+              :width "20%"
+              :height "10px"
+              :anchor "top right")
+    :stacking "bg"
+    :windowtype "desktop"
+    :wm-ignore false
+    (box
+        :orientation "v"
+        :halign "center"
+        :space-evenly "false"
+        :spacing "20"
+        (clock-data)
+        (data-day)
+        (inf-system)
+        (work-station)
+    )
+)
 
 
 ;;-------------Comentario-------------;;
