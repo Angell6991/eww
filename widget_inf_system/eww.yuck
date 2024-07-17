@@ -1,0 +1,86 @@
+(defpoll var_desktops :interval "2s"  "bash ~/.config/eww/widget_hours/scripts/workspaces.sh")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;---------------def_widgets---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwidget inf-system []
+    (box
+        :class "box-inf-system"
+        :spacing "0"
+        (box
+            :orientation "hirizontal"
+            :spacing "10"
+            (box
+                :class "box-inf-system_01"
+                (label
+                 :class "CPU-inf"
+                 :text " CPU:${round(EWW_CPU.avg, 0)}% | 󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
+                )
+            )
+            (box
+                :class "box-inf-system_01"
+                (label
+                    :class "ram-label" 
+                    :text "  RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
+                    ;; :tooltip "Uso de RAM"
+                )
+            )
+            (box
+                :class "box-inf-system_01"
+                (label
+                 :class "battery-label"
+                 :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status} 󰂀 ${EWW_BATTERY['BAT0'].capacity}%"
+                )
+            )
+        )
+    )
+)
+
+
+(defwidget work-station []
+    (box
+        :class "desk-box"
+        (box
+            :class "desk-box_01"
+            :orientation "horizontal"
+            (label
+                :class "desk-test"
+                :text "${var_desktops}"
+            )
+        )
+    )
+)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;-------------------def_var---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defwindow widget_inf
+    :class "widget_inf"
+    :monitor 0
+    :geometry (geometry
+              :x "2%"
+              :y "30px"
+              :width "10%"
+              :height "10px"
+              :anchor "bottom right")
+    :stacking "bg"
+    :windowtype "desktop"
+    :wm-ignore false
+    (box
+        :orientation "h"
+        :halign "center"
+        :space-evenly "false"
+        :spacing "20"
+        (work-station)
+        (inf-system)
+    )
+)
+
+
+;;-------------Comentario-------------;;
+
+
+

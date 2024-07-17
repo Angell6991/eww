@@ -141,33 +141,21 @@
     :geometry (geometry
               :x "2%"
               :y "30px"
-              :width "20%"
+              :width "10%"
               :height "10px"
               :anchor "top right")
     :stacking "bg"
     :windowtype "desktop"
     :wm-ignore false
     (box
-        :orientation "h"
+        :orientation "v"
         :halign "center"
         :space-evenly "false"
         :spacing "20"
-        (box
-            :orientation "v"
-            :halign "center"
-            :space-evenly "false"
-            :spacing "20"
-            (clock-data)
-            (work-station)
-        )
-        (box
-            :orientation "v"
-            :halign "center"
-            :space-evenly "false"
-            :spacing "20"
-            (data-day)
-            (inf-system)
-        )
+        ;;(work-station)
+        (data-day)
+        (clock-data)
+        ;;(inf-system)
     )
 )
 
