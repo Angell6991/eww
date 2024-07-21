@@ -6,6 +6,15 @@
         :class "box-apps"
         :spacing "10"
         (button 
+            :onclick "blueman-manager &" 
+            :class "button-app"
+            :tooltip "Bluetooth"
+            (label
+                :class "bluetooth"
+                :text " "
+            )
+        )
+        (button 
             :onclick "firefox --private-window https://github.com/Angell6991 &" 
             :onrightclick "firefox https://github.com/Angell6991 &" 
             :class "button-app"
