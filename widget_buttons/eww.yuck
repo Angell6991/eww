@@ -6,6 +6,15 @@
         :class "box-apps"
         :spacing "10"
         (button 
+            :onclick "pavucontrol &" 
+            :class "button-app"
+            :tooltip "Pavucontrol"
+            (label
+                :class "pavucontrol"
+                :text "󰣙 "
+            )
+        )
+        (button 
             :onclick "blueman-manager &" 
             :class "button-app"
             :tooltip "Bluetooth"
