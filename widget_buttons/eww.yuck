@@ -11,7 +11,7 @@
             :tooltip "Pavucontrol"
             (label
                 :class "pavucontrol"
-                :text "󰣙 "
+                :text ""
             )
         )
         (button 
@@ -39,7 +39,7 @@
             :tooltip "Metric3"
             (label
                 :class "metric3"
-                :text " "
+                :text ""
             )
         )
     )
