@@ -6,31 +6,43 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defwidget clock-data []
     (box
-        :class "box_clock"
+        :class "box-glass"
         :orientation "horizontal"
-        :spacing "0"
-        ;;:spacing "15"
-        :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
+        :space-evenly "false"
         :halign "center"
-        (box
-            :class "box_clock_box"
-            (label
-                :class "time-label"
-                :text "${formattime(EWW_TIME, '%H')}"
-            )
-        )
-        (box
-            (label
-                :class "clock-dot"
+        :spacing "0"
+        (button
+            :onclick "gnome-clocks &" 
+            :class "bata_clock_button"
+            :tooltip "Clock"        
+            (box
+                :class "box_clock"
+                :orientation "horizontal"
                 :spacing "0"
-                :text ":"
-            )
-        )
-        (box
-            :class "box_clock_box"
-            (label
-                :class "time-label"
-                :text "${formattime(EWW_TIME, '%M')}"
+                ;;:spacing "15"
+                :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
+                :halign "center"
+                (box
+                    :class "box_clock_box"
+                    (label
+                        :class "time-label"
+                        :text "${formattime(EWW_TIME, '%H')}"
+                    )
+                )
+                (box
+                    (label
+                        :class "clock-dot"
+                        :spacing "0"
+                        :text ":"
+                    )
+                )
+                (box
+                    :class "box_clock_box"
+                    (label
+                        :class "time-label"
+                        :text "${formattime(EWW_TIME, '%M')}"
+                    )
+                )
             )
         )
     )

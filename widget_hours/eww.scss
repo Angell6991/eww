@@ -12,6 +12,19 @@
 ////    widget_clock_data     ////
 //////////////////////////////////
 
+.bata_clock_button {
+  background-color: rgba(29, 29, 29, 0);
+  box-shadow: none;
+  border: none;
+  border-color: #FFFFFF;
+  padding: 0;
+  font-size: 20px;
+  color: #00CCDE;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  border-radius: 10px;
+}
+
 .box_clock {
   background-color: rgba(29, 29, 29, 0.7); /* Color con 30% de opacidad */
   border-radius: 10px;
