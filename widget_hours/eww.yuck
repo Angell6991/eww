@@ -39,94 +39,63 @@
 
 (defwidget data-day []
     (box
-        :class "box-day-contener"
+        :class "box-glass"
         :orientation "horizontal"
         :space-evenly "false"
         :halign "center"
-        :spacing "3"
-        (box 
-            :class "box-day-logo"
-            (label
-                :class "date-label-logo"
-                :text "󰃭 "
-            )
-        )
-        (box 
-            :class "box-day"
-            (label
-                :class "date-label"
-                :text "${formattime(EWW_TIME, '%d')}"
-            )
-        )
-        (box 
-            :class "box-day-separ"
-            (label
-                :class "date-label-logo"
-                :text "|"
-            )
-        )       
-        (box 
-            :class "box-day"
-            (label
-                :class "date-label"
-                :text "${formattime(EWW_TIME, '%m')}"
-            )
-        )
-        (box 
-            :class "box-day-separ"
-            (label
-                :class "date-label-logo"
-                :text "|"
-            )
-        )    
-        (box 
-            :class "box-day"
-            (label
-                :class "date-label"
-                :text "${formattime(EWW_TIME, '%Y')}"
-            )
-        )
-    )
-)
-
-
-(defwidget inf-system []
-    (box
-        :class "box-inf-system"
         :spacing "0"
-        (box
-            :class "box-inf-system_01"
-            :orientation "vertical"
-            :spacing "5"
-            (label
-                :class "battery-label"
-                :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status}   ${EWW_BATTERY['BAT0'].capacity}%"
-                ;; :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : ' '}   ${EWW_BATTERY['BAT0'].capacity}%"
-                ;; :tooltip "Estado de la Batería"
-            )
-            (label
-                :class "ram-label" 
-                :text "  RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
-                ;; :tooltip "Uso de RAM"
-            )
-            (label
-                :class "CPU-inf"
-                :text " CPU:${round(EWW_CPU.avg, 0)}% | 󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
-            )
-        )
-    )
-)
-
-
-(defwidget work-station []
-    (box
-        :class "desk-box"
-        (box
-            :class "desk-box_01"
-            :orientation "horizontal"
-            (label
-                :class "desk-test"
-                :text "${var_desktops}"
+        (button
+            :onclick "gnome-calendar &" 
+            :class "bata_day_button"
+            :tooltip "Calendar"
+            (box
+                :class "box-day-contener"
+                :orientation "horizontal"
+                :space-evenly "false"
+                :halign "center"
+                :spacing "3"
+                (box 
+                    :class "box-day-logo"
+                    (label
+                       :class "date-label-logo"
+                       :text "󰃭 "
+                   )
+                )
+                (box 
+                   :class "box-day"
+                   (label
+                       :class "date-label"
+                       :text "${formattime(EWW_TIME, '%d')}"
+                   )
+                )
+                (box 
+                   :class "box-day-separ"
+                   (label
+                       :class "date-label-logo"
+                       :text "|"
+                   )
+                )       
+                (box 
+                   :class "box-day"
+                   (label
+                       :class "date-label"
+                       :text "${formattime(EWW_TIME, '%m')}"
+                   )
+                )
+                (box 
+                   :class "box-day-separ"
+                   (label
+                       :class "date-label-logo"
+                       :text "|"
+                   )
+                )    
+                (box 
+                   :class "box-day"
+                   (label
+                       :class "date-label"
+                       :text "${formattime(EWW_TIME, '%Y')}"
+                   )
+                ) 
             )
         )
     )
@@ -152,15 +121,12 @@
         :halign "center"
         :space-evenly "false"
         :spacing "20"
-        ;;(work-station)
         (data-day)
         (clock-data)
-        ;;(inf-system)
     )
 )
 
 
 ;;-------------Comentario-------------;;
-
 
 

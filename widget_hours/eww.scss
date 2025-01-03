@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+.box-glass {
+  background-color: rgba(29, 29, 29, 0); /* Color con 30% de opacidad */
+  padding: 0px;
+}
 
 //////////////////////////////////
 ////    widget_clock_data     ////
@@ -38,6 +42,19 @@
 //////////////////////////////////
 ////     widget_data_day      ////
 //////////////////////////////////
+
+.bata_day_button {
+  background-color: rgba(29, 29, 29, 0);
+  box-shadow: none;
+  border: none;
+  border-color: #FFFFFF;
+  padding: 0;
+  font-size: 20px;
+  color: #00CCDE;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  border-radius: 10px;
+}
 
 .box-day-contener {
   background-color: rgba(29, 29, 29, 0.7); /* Color con 30% de opacidad */
@@ -76,68 +93,6 @@
   color: #ff44a0;
   // font-family: "Inconsolata Nerd Font";
   font-family: "Digital Dismay";
-}
-
-
-//////////////////////////////////
-////    widget_inf_system     ////
-//////////////////////////////////
-
-.box-inf-system {
-  background-color: rgba(29, 29, 29, 0.7); 
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.box-inf-system_01 {
-  background-color: #161616; 
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.battery-label {
-  font-size: 25px;
-  color: #9821D0;
-  // font-family: "Inconsolata Nerd Font";
-  font-family: "Inconsolata NF";
-}
-
-.ram-label {
-  font-size: 18px;
-  color: #B8B8B8;
-  // font-family: "Inconsolata Nerd Font";
-  font-family: "Inconsolata NF";
-}
-
-.CPU-inf {
-  font-size: 18px;
-  color: #9821D0;
-  // font-family: "Inconsolata Nerd Font";
-  font-family: "Inconsolata NF";
-}
-
-
-//////////////////////////////////
-////-----View_workspaces------////
-//////////////////////////////////
-
-.desk-box {
-  background-color: rgba(29, 29, 29, 0.7); 
-  padding: 5px;
-  border-radius: 10px; /* Bordes redondeados */
-}
-
-.desk-box_01 {
-  background-color: rgba(29, 29, 29, 1); 
-  padding: 8px;
-  border-radius: 10px; /* Bordes redondeados */
-}
-
-.desk-test {
-  font-size: 17px;
-  color: #00CCDE;
-  // font-family: "Inconsolata Nerd Font";
-  font-family: "Inconsolata NF";
 }
 
 
