@@ -1,0 +1,99 @@
+.bar-window{
+  background-color: rgba(29, 29, 29, 0.2);
+  padding: 1000px;
+  border-radius: 10px;
+}
+
+//////////////////////////////
+////      power_box       ////
+//////////////////////////////
+.box-power {
+  background-color: rgba(29, 29, 29, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.box-glass {
+  background-color: rgba(29, 29, 29, 0);
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.box-cancel {
+  background-color: rgba(29, 29, 29, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+////------config_butons---////
+.button-power {
+  background: #161616;
+  // box-shadow: none;
+  border: none;
+  border-color: #FFFFFF;
+  padding: 25;
+  font-size: 20px;
+  color: #00CCDE;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  border-radius: 10px;
+}
+
+.button-cancel {
+  background: #161616;
+  // box-shadow: none;
+  border: none;
+  border-color: #FFFFFF;
+  padding: 15;
+  font-size: 20px;
+  color: #00CCDE;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  border-radius: 10px;
+}
+// .button:hover {
+//   background-color: rgba(255, 255, 255, 0.1);
+// }
+
+////---config_text_of_butons---////
+.close-secion{
+  font-size: 60px;
+  color: #9821D0;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  text-shadow: none;
+}
+
+.reboot{
+  font-size: 60px;
+  color: #B8B8B8;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  text-shadow: none;
+}
+
+.suspend{
+  font-size: 60px;
+  color: #00CCDE;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  text-shadow: none;
+}
+
+.poweroff{
+  font-size: 60px;
+  color: #ff44a0;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  text-shadow: none;
+}
+
+.cancel{
+  font-size: 30px;
+  color: #B8B8B8;
+  // font-family: "Inconsolata Nerd Font";
+  font-family: "Inconsolata NF";
+  text-shadow: none;
+}
+
+

@@ -1,0 +1,96 @@
+(defwidget power-menu []
+    (box 
+        :orientation "v" 
+        :halign "center" 
+        :valign "end" 
+        :class "box-power"
+        :spacing "30"
+        (box
+            :orientation "h" 
+            :halign "center" 
+            :valign "end" 
+            :class "box-glass"
+            :spacing "30"
+            (button :onclick "systemctl poweroff" 
+                :class "button-power"
+                :tooltip "poweroff"
+                (label 
+                    :class "poweroff"
+                    :text "⏻ "
+                )
+            )       
+            (button :onclick "systemctl suspend" 
+                :class "button-power"
+                :tooltip "suspend"
+                (label 
+                    :class "suspend"
+                    :text "󰤄 "
+                )
+            )
+        ) 
+
+        (box
+            :orientation "h" 
+            :halign "center" 
+            :valign "end" 
+            :class "box-glass"
+            :spacing "30" 
+            (button :onclick "hyprctl dispatch exit 0" 
+                :class "button-power"
+                :tooltip "close secion"
+                (label
+                    :class "close-secion"
+                    :text "󰈆 "
+                )
+            )
+            (button :onclick "systemctl reboot" 
+                :class "button-power"
+                :tooltip "reboot"
+                (label 
+                    :class "reboot"
+                    :text " "
+                )
+            )
+        )
+    )
+)
+
+(defwidget button-cancel []
+    (box 
+        :orientation "v" 
+        :halign "center" 
+        :valign "end" 
+        :class "box-cancel"
+        :spacing "30"
+        (button :onclick "~/.eww/target/release/eww -c ~/.config/eww/widget_power_menu kill" 
+            :class "button-cancel"
+            (label 
+                :class "cancel"
+                :text " 󰫰󰫮󰫻󰫰󰫲󰫹"
+            )
+        )
+    )
+)
+
+
+(defwindow bar-window 
+    :monitor 0 
+    :class "bar-window"
+    :stacking "fg" 
+    :geometry 
+    (geometry 
+        :x "2%" 
+        :y "30px" 
+        :width "5%" 
+        :height "30px"
+        :anchor "center"
+    )
+    (box
+        :orientation "v" 
+        :spacing "20"
+        :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
+        (power-menu)
+        (button-cancel)
+    )
+)
+

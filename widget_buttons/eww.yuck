@@ -23,16 +23,6 @@
                 :text " "
             )
         )
-        ;;(button 
-        ;;    :onclick "firefox --private-window https://github.com/Angell6991 &" 
-        ;;    :onrightclick "firefox https://github.com/Angell6991 &" 
-        ;;    :class "button-app"
-        ;;    :tooltip "GitHub/Angell6991"
-        ;;    (label
-        ;;        :class "git_hub"
-        ;;        :text " "
-        ;;    )
-        ;;)
         (button 
             :onclick "bash ~/.config/eww/widget_buttons/scripts/open_metric3.sh" 
             :class "button-app"
@@ -54,36 +44,12 @@
         :valign "end" 
         :class "box-power"
         :spacing "10"
-        (button :onclick "hyprctl dispatch exit 0" 
+        (button :onclick "bash ~/.config/eww/widget_buttons/scripts/open_power_menu.sh" 
             :class "button-power"
-            :tooltip "close secion"
+            :tooltip "power menu"
             (label
-                :class "close-secion"
-                :text "󰈆 "
-            )
-        )
-        (button :onclick "systemctl reboot" 
-            :class "button-power"
-            :tooltip "reboot"
-            (label 
-                :class "reboot"
-                :text " "
-            )
-        )
-        (button :onclick "systemctl suspend" 
-            :class "button-power"
-            :tooltip "suspend"
-            (label 
-                :class "suspend"
-                :text "󰤄 "
-            )
-        )
-        (button :onclick "systemctl poweroff" 
-            :class "button-power"
-            :tooltip "poweroff"
-            (label 
-                :class "poweroff"
-                :text "⏻ "
+                :class "button_power_menu"
+                :text " "
             )
         )
     )
@@ -105,8 +71,8 @@
     )
     (box
         :orientation "v" 
-        :spacing "45"
-        :space-evenly "false"  ;;espacio estre widget valor fuleano: true ó false
+        :spacing "20"           ;;45
+        :space-evenly "false"   ;;espacio estre widget valor buleano: true ó false
         (app-menu)
         (power-menu)
     )
