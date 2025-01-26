@@ -29,8 +29,8 @@
 .button-power {
   background: #161616;
   // box-shadow: none;
-  border: none;
-  border-color: #FFFFFF;
+  border: 2px solid transparent;
+  border-color: #010101;
   padding: 25;
   font-size: 20px;
   color: #00CCDE;
@@ -43,7 +43,7 @@
   background: #161616;
   // box-shadow: none;
   border: none;
-  border-color: #FFFFFF;
+  border-color: #010101;
   padding: 15;
   font-size: 20px;
   color: #00CCDE;
