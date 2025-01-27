@@ -58,7 +58,7 @@
 (defwidget button-cancel []
     (box 
         :orientation "v" 
-        :halign "center" 
+        ;; :halign "center" 
         :valign "end" 
         :class "box-cancel"
         :spacing "30"
@@ -76,8 +76,9 @@
 (defwindow bar-window 
     :monitor 0 
     :class "bar-window"
-    :stacking "fg" 
-    :geometry 
+    :stacking "overlay" ;; "fg"
+    :focusable "exclusive"
+    :geometry
     (geometry 
         :x "2%" 
         :y "30px" 
