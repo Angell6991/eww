@@ -19,12 +19,12 @@
                     :text "⏻ "
                 )
             )       
-            (button :onclick "systemctl suspend" 
+            (button :onclick "~/.eww/target/release/eww -c ~/.config/eww/widget_power_menu kill && sleep 2 && hyprlock & sleep 5 && systemctl suspend" 
                 :class "button-power"
                 :tooltip "suspend"
                 (label 
                     :class "suspend"
-                    :text "󰤄 "
+                    :text "󰌾 "
                 )
             )
         ) 
