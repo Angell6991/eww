@@ -19,15 +19,15 @@ a clock application, and a power menu, all built with EWW as well.
 
 If you wish to copy the same configuration shown in the demonstration, the applications displayed are:    
     
-    - gnome-calendar
-    - gnome-clocks
-    - blueman-manager
+- gnome-calendar
+- gnome-clocks
+- blueman-manager
 
 And the necessary fonts are: 
 
-    - [nerd font](https://www.nerdfonts.com/)
-    - [warhammer40k](https://github.com/Angell6991/Instalation_programs/tree/master/Fonts)
-    - [Digital Dismay](https://www.dafont.com/digital-dismay.font)
+- [nerd font](https://www.nerdfonts.com/)
+- [warhammer40k](https://github.com/Angell6991/Instalation_programs/tree/master/Fonts)
+- [Digital Dismay](https://www.dafont.com/digital-dismay.font)
 
 Although these applications and fonts can be replaced with others of your choice, it will require some digging into the code.
 
