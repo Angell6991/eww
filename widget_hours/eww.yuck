@@ -1,6 +1,3 @@
-(defpoll var_desktops :interval "2s"  "bash ~/.config/eww/widget_hours/scripts/workspaces.sh")
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;---------------def_widgets---------------------;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
