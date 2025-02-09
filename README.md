@@ -14,7 +14,7 @@ a clock application, and a power menu, all built with EWW as well.
 
 
 <p align="center">
-  <video src="Images/eww_video.mp4">
+  <video src="Images/eww_video.mp4" controls></video>
 </p>
 
 
