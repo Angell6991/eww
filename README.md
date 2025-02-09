@@ -13,9 +13,10 @@ where the desktop features a series of widgets that allow opening applications s
 a clock application, and a power menu, all built with EWW as well.
 
 
-<p align="center">
-  <img src="Images/eww.gif">
-</p>
+<video width="640" height="480" controls>
+  <source src="Images/eww_video.mp4" type="video/mp4">
+</video>
+
 
 If you wish to copy the same configuration shown in the demonstration, the applications displayed are:    
     
