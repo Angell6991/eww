@@ -8,9 +8,9 @@
 
 ## Description 
 
-This repository is an application of Elkowars Wacky Widgets (EWW) on the Hyprland window manager, 
-where the desktop features a series of widgets that allow opening applications such as a calendar, 
-a clock application, and a power menu, all built with EWW as well.
+This repository is an application of [Elkowars Wacky Widgets (EWW)](https://github.com/elkowar/eww) 
+on the Hyprland window manager, where the desktop features a series of widgets that allow opening 
+applications such as a calendar, a clock application, and a power menu, all built with EWW as well.
 
 
 <p align="center">
