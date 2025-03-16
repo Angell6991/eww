@@ -5,46 +5,67 @@
 ;;---------------def_widgets---------------------;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+;;----------------Info_system--------------------;;
+
+(defwidget CPU_INF []
+    (box
+        :class "box-inf-system_01"
+        (label
+            :class "CPU-inf"
+            :text " CPU:${round(EWW_CPU.avg, 0)}%"
+        )
+    )
+)
+
+(defwidget CPU_TEMP []
+    (box
+        :class "box-inf-system_01"
+        (label
+            :class "CPU-inf-temp"
+            :text "󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
+        )
+    )
+)
+
+(defwidget RAM_INF []
+    (box
+        :class "box-inf-system_01"
+        (label
+            :class "ram-label" 
+            :text "  RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
+        )
+    )
+)
+
+(defwidget BATTERY_INF []
+    (box
+        :class "box-inf-system_01"
+        (label
+            :class "battery-label"
+            :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status} 󰂀 ${EWW_BATTERY['BAT0'].capacity}%"
+        )
+    )
+)
+
+
 (defwidget inf-system []
     (box
         :class "box-inf-system"
         :spacing "0"
         (box
-            :orientation "hirizontal"
+            :orientation "h"
             :spacing "10"
-            (box
-                :class "box-inf-system_01"
-                (label
-                 :class "CPU-inf"
-                 :text " CPU:${round(EWW_CPU.avg, 0)}%"
-                )
-            )
-            (box
-                :class "box-inf-system_01"
-                (label
-                 :class "CPU-inf-temp"
-                 :text "󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
-                )
-            )
-            (box
-                :class "box-inf-system_01"
-                (label
-                    :class "ram-label" 
-                    :text "  RAM: ${round(EWW_RAM.used_mem_perc, 0)}%"
-                    ;; :tooltip "Uso de RAM"
-                )
-            )
-            (box
-                :class "box-inf-system_01"
-                (label
-                 :class "battery-label"
-                 :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status} 󰂀 ${EWW_BATTERY['BAT0'].capacity}%"
-                )
-            )
+            (CPU_INF)
+            (CPU_TEMP)
+            (RAM_INF)
+            (BATTERY_INF) 
         )
     )
 )
 
+
+;;-----------------WorkSpaces--------------------;;
 
 (defwidget work-station []
     (box
@@ -60,34 +81,30 @@
     )
 )
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;-------------------def_var---------------------;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defwindow widget_inf
     :class "widget_inf"
-    :monitor 0
-    :geometry (geometry
-              :x "2%"
-              :y "30px"
-              :width "10%"
-              :height "10px"
-              :anchor "bottom right")
     :stacking "bg"
-    :windowtype "desktop"
-    :wm-ignore false
+    :monitor 0
+    :geometry 
+    (geometry
+        :x "2%"
+        :y "30px"
+        :width "10%"
+        :height "10px"
+        :anchor "bottom right"
+    )
     (box
         :orientation "h"
         :halign "center"
         :space-evenly "false"
         :spacing "20"
         (work-station)
-        (inf-system)
+        (inf-system)  
     )
 )
-
-
-;;-------------Comentario-------------;;
-
 
 
