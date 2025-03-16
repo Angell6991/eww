@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;---------------def_widgets---------------------;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defwidget clock-data []
     (box
         :class "box-glass"
@@ -114,17 +115,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;-------------------def_var---------------------;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defwindow widget_hours
     :monitor 0
-    :geometry (geometry
-              :x "2%"
-              :y "30px"
-              :width "10%"
-              :height "10px"
-              :anchor "top right")
     :stacking "bg"
-    :windowtype "desktop"
-    :wm-ignore false
+    :geometry 
+    (geometry
+        :x "2%"
+        :y "30px"
+        :width "10%"
+        :height "10px"
+        :anchor "top right"
+    )
     (box
         :orientation "v"
         :halign "center"
@@ -134,8 +136,5 @@
         (clock-data)
     )
 )
-
-
-;;-------------Comentario-------------;;
 
 
