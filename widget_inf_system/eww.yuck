@@ -11,6 +11,8 @@
 (defwidget CPU_INF []
     (box
         :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
         (label
             :class "CPU-inf"
             :text "󰻠 ${round(EWW_CPU.avg, 0)}%"
@@ -21,6 +23,8 @@
 (defwidget CPU_TEMP []
     (box
         :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
         (label
             :class "CPU-inf-temp"
             :text "󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
@@ -31,6 +35,8 @@
 (defwidget RAM_INF []
     (box
         :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
         (label
             :class "ram-label" 
             :text "礪 ${round(EWW_RAM.used_mem_perc, 0)}%"
@@ -41,6 +47,8 @@
 (defwidget BATTERY_INF []
     (box
         :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
         (label
             :class "battery-label"
             :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status} 󰂀 ${EWW_BATTERY['BAT0'].capacity}%"
@@ -55,6 +63,8 @@
 (defwidget work-station []
     (box
         :class "desk-box_01"
+        :halign "center"
+        :space-evenly "false"
         (label
             :class "desk-test"
             :text "${var_desktops}"
@@ -85,29 +95,28 @@
     :valign  "fill"
     :geometry 
     (geometry
-        :x "5%"  ;;2% 
+        :x "2%"  ;;2% 
         :y "30px"
         :width "12%"
         :height "10px"
-        :anchor "bottom right"
+        :anchor "top left"
     )
     (box
         :orientation "v"
         :halign "center"
         :space-evenly "false"
         :spacing "10"
-        (work-station)
         (box
             :orientation "h"
             :halign "center"
             :space-evenly "false"
             :spacing "10"
-            (CPU_INF)
+            (BATTERY_INF)
             (separator)
-            (CPU_TEMP)
+            (RAM_INF)
+            (separator)
+            (work-station)
         )
-        (RAM_INF)
-        (BATTERY_INF)
     )
 )
 

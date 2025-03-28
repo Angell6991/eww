@@ -1,0 +1,236 @@
+(defpoll var_desktops :interval "2s"  "bash ~/.config/eww/widget_hours+inf_system/scripts/workspaces.sh")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;---------------def_widgets---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;-----------------Data_clock--------------------;;
+
+(defwidget clock-data []
+    (box
+        :class "box-glass"
+        :orientation "horizontal"
+        :space-evenly "false"
+        :halign "center"
+        :spacing "0"
+        (button
+            :onclick "gnome-clocks &" 
+            :class "bata_clock_button"
+            :tooltip "Clock"        
+            (box
+                :class "box_clock"
+                :orientation "horizontal"
+                :spacing "0"
+                :space-evenly "false"  ;;espacio estre widget valor buleano: true ó false
+                :halign "center"
+                (box
+                    :class "box_clock_box"
+                    (label
+                        :class "time-label"
+                        :text "${formattime(EWW_TIME, '%H')}"
+                    )
+                )
+                (box
+                    (label
+                        :class "clock-dot"
+                        :spacing "0"
+                        :text ":"
+                    )
+                )
+                (box
+                    :class "box_clock_box"
+                    (label
+                        :class "time-label"
+                        :text "${formattime(EWW_TIME, '%M')}"
+                    )
+                )
+            )
+        )
+    )
+)
+
+
+;;------------------Data_day---------------------;;
+
+(defwidget data-day []
+    (box
+        :class "box-glass"
+        :orientation "horizontal"
+        :space-evenly "false"
+        :halign "center"
+        :spacing "0"
+        (button
+            :onclick "gnome-calendar &" 
+            :class "bata_day_button"
+            :tooltip "Calendar"
+            (box
+                :class "box-day-contener"
+                :orientation "horizontal"
+                :space-evenly "false"
+                :halign "center"
+                :spacing "3"
+                (box 
+                    :class "box-day-logo"
+                    (label
+                       :class "date-label-logo"
+                       :text "󰃭 "
+                   )
+                )
+                (box 
+                   :class "box-day"
+                   (label
+                       :class "date-label"
+                       :text "${formattime(EWW_TIME, '%d')}"
+                   )
+                )
+                (box 
+                   :class "box-day-separ"
+                   (label
+                       :class "date-label-logo"
+                       :text "|"
+                   )
+                )       
+                (box 
+                   :class "box-day"
+                   (label
+                       :class "date-label"
+                       :text "${formattime(EWW_TIME, '%m')}"
+                   )
+                )
+                (box 
+                   :class "box-day-separ"
+                   (label
+                       :class "date-label-logo"
+                       :text "|"
+                   )
+                )    
+                (box 
+                   :class "box-day"
+                   (label
+                       :class "date-label"
+                       :text "${formattime(EWW_TIME, '%Y')}"
+                   )
+                ) 
+            )
+        )
+    )
+)
+
+
+;;----------------Info_system--------------------;;
+
+(defwidget CPU_INF []
+    (box
+        :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
+        (label
+            :class "CPU-inf"
+            :text "󰻠 ${round(EWW_CPU.avg, 0)}%"
+        )
+    )
+)
+
+(defwidget CPU_TEMP []
+    (box
+        :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
+        (label
+            :class "CPU-inf-temp"
+            :text "󱠇 ${EWW_TEMPS.CORETEMP_CORE_0}°C"
+        )
+    )
+)
+
+(defwidget RAM_INF []
+    (box
+        :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
+        (label
+            :class "ram-label" 
+            :text "礪 ${round(EWW_RAM.used_mem_perc, 0)}%"
+        )
+    )
+)
+
+(defwidget BATTERY_INF []
+    (box
+        :class "box-inf-system_01"
+        :halign "center"
+        :space-evenly "false"
+        (label
+            :class "battery-label"
+            :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status} 󰂀 ${EWW_BATTERY['BAT0'].capacity}%"
+        )
+    )
+)
+
+
+
+;;-----------------WorkSpaces--------------------;;
+
+(defwidget work-station []
+    (box
+        :class "desk-box_01"
+        :halign "center"
+        :space-evenly "false"
+        (label
+            :class "desk-test"
+            :text "${var_desktops}"
+        )
+    )
+)
+
+;;-------------------Sepator--------------------;;
+
+(defwidget separator []
+    (box
+        :halign "center"
+        :space-evenly "false"
+        (label
+            :class "separator-text"
+            :text   ""
+        )
+    )
+)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;-------------------def_var---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow widget_hours
+    :monitor 0
+    :stacking "bg"
+    :geometry 
+    (geometry
+        :x "2%"
+        :y "30px"
+        :width "10%"
+        :height "10px"
+        :anchor "top right"
+    )
+    (box
+        :orientation "v"
+        :halign "center"
+        :space-evenly "false"
+        :spacing "20"
+        (data-day)
+        (clock-data)
+        (box
+            :orientation "h"
+            :halign "center"
+            :space-evenly "false"
+            :spacing "10"
+            (CPU_INF)
+            (separator)
+            (CPU_TEMP)
+        )
+    )
+)
+
+

@@ -1,0 +1,186 @@
+.widget_hours {
+  background-color: rgba(28, 28, 28, 0); /* Color con 100% de opacidad */
+  padding: 0px;
+}
+
+.box-glass {
+  background-color: rgba(29, 29, 29, 0); 
+  padding: 0px;
+}
+
+//////////////////////////////////
+////    widget_clock_data     ////
+//////////////////////////////////
+
+.bata_clock_button {
+  background: rgba(29, 29, 29, 0);
+  // background-color: rgba(29, 29, 29, 0);
+  box-shadow: none;
+  border: none;
+  border-color: #FFFFFF;
+  padding: 0;
+  font-size: 20px;
+  color: #00CCDE;
+  font-family: "Inconsolata NF";
+  border-radius: 10px;
+}
+
+.box_clock {
+  background-color: rgba(29, 29, 29, 0.7); 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box_clock_box {
+  background-color: #161616; 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.clock-dot {
+  font-size: 55px;        
+  color: #B8B8B8;           
+  font-family: "Digital Dismay";
+  text-shadow: none;
+}
+
+.time-label {
+  font-size: 55px;        
+  color: #5AEDA3;           
+  font-family: "Digital Dismay";
+  text-shadow: none;
+}
+
+
+//////////////////////////////////
+////     widget_data_day      ////
+//////////////////////////////////
+
+.bata_day_button {
+  background: rgba(29, 29, 29, 0);
+  // background-color: rgba(29, 29, 29, 0);
+  box-shadow: none;
+  border: none;
+  border-color: #FFFFFF;
+  padding: 0;
+  font-size: 20px;
+  color: #00CCDE;
+  font-family: "Inconsolata NF";
+  border-radius: 10px;
+}
+
+.box-day-contener {
+  background-color: rgba(29, 29, 29, 0.7); 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box-day-logo {
+  background-color: rgba(29, 29, 29, 0); 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box-day {
+  background-color: #161616; 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.date-label-logo {
+  font-size: 22px;
+  color: #B8B8B8;
+  font-family: "Inconsolata NF";
+  text-shadow: none;
+}
+
+.date-label-separ {
+  font-size: 25px;
+  color: #B8B8B8;
+  font-family: "Digital Dismay";
+  text-shadow: none;
+}
+
+.date-label {
+  font-size: 25px;
+  color: #ff44a0;
+  font-family: "Digital Dismay";
+  text-shadow: none;
+}
+
+
+//////////////////////////////////
+////    widget_inf_system     ////
+//////////////////////////////////
+
+
+// Definir una variable de color
+$color_01: rgba(29, 29, 29, 0.2);  
+$color_02: rgba(184, 184, 184); 
+
+.box-inf-system {
+  background-color: rgba(29, 29, 29, 0.7); 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box-inf-system_01 {
+  background-color: $color_01; 
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.battery-label {
+  font-size: 19px;
+  color: $color_02;
+  font-family: "Inconsolata NF";
+}
+
+.ram-label {
+  font-size: 17px;
+  color: $color_02;
+  font-family: "Inconsolata NF";
+}
+
+.CPU-inf {
+  font-size: 17px;
+  color: $color_02;
+  font-family: "Inconsolata NF";
+}
+
+.CPU-inf-temp {
+  font-size: 17px;
+  color: $color_02;
+  font-family: "Inconsolata NF";
+}
+
+
+//////////////////////////////////
+////-----View_workspaces------////
+//////////////////////////////////
+
+.desk-box_01 {
+  background-color: rgba(29, 29, 29, 0); 
+  padding: 8px;
+  border-radius: 10px; 
+}
+
+.desk-test {
+  font-size: 17px;
+  color: rgba(29, 29, 29);
+  font-family: "Inconsolata NF";
+}
+
+
+//////////////////////////////////
+////-----View_Separator-------////
+//////////////////////////////////
+
+.separator-text {
+  font-size: 17px;
+  color: #B8B8B8;
+  font-family: "Inconsolata NF";
+}
+
+
+
