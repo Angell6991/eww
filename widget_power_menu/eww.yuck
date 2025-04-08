@@ -44,7 +44,7 @@
                 :tooltip "close secion"
                 (label
                     :class "close-secion"
-                    :text " "
+                    :text " "
                 )
             )
             (button :onclick "~/.eww/target/release/eww -c ~/.config/eww/widget_power_menu kill && sleep 2 && systemctl reboot" 
@@ -52,7 +52,10 @@
                 :tooltip "reboot"
                 (label 
                     :class "reboot"
-                    :text " "
+                    ;; :text " "  
+                    :text " "  
+                    ;; :text " "  
+                    ;; :text " "  
                 )
             )
         )
