@@ -1,0 +1,39 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;---------------def_widgets---------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defwidget icon-lock []
+    (box
+       (label
+            :class  "icon"
+            :text "󱚳 "
+       ) 
+    )
+)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;-----------------def_widget--------------------;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow lock-icon-glass
+    :monitor 0 
+    :class "bar-window"
+    :stacking "bg" 
+    :geometry 
+    (geometry 
+        :x "2%" 
+        :y "30px" 
+        :width "5%" 
+        :height "30px"
+        :anchor "bottom right"
+    )
+    (box
+        :orientation "v" 
+        :spacing "10"           ;;45
+        ;:space-evenly "false"   ;;espacio estre widget valor buleano: true ó false
+        (icon-lock)
+    )
+)
+

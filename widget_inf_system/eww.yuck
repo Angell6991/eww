@@ -52,7 +52,7 @@
         :space-evenly "false"
         (label
             :class "battery-label"
-            :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '' : EWW_BATTERY['BAT0'].status == 'Discharging' ? ' ' : EWW_BATTERY['BAT0'].status == 'Full' ? 'Full' : EWW_BATTERY['BAT0'].status} 󰂀 ${EWW_BATTERY['BAT0'].capacity}%"
+            :text "${EWW_BATTERY['BAT0'].status == 'Charging' ? '󰂄' : EWW_BATTERY['BAT0'].status == 'Discharging' ? '󰂀' : EWW_BATTERY['BAT0'].status == 'Full' ? '󱈑' : EWW_BATTERY['BAT0'].status == 'Not charging' ? '󰂃': EWW_BATTERY['BAT0'].status} ${EWW_BATTERY['BAT0'].capacity}%"
         )
     )
 )
@@ -100,8 +100,8 @@
         :y "30px"
         :width "12%"
         :height "10px"
-        ;; :anchor "bottom left"
-        :anchor "top left"
+        :anchor "bottom left"
+        ;; :anchor "top left"
     )
     (box
         :orientation "v"

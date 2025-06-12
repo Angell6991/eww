@@ -212,8 +212,8 @@
         :y "30px"
         :width "10%"
         :height "10px"
-        ;; :anchor "top left"
-        :anchor "top right"
+        :anchor "top left"
+        ;; :anchor "top right"
     )
     (box
         :orientation "v"

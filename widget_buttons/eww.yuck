@@ -73,8 +73,8 @@
         :y "30px" 
         :width "5%" 
         :height "30px"
-        ;; :anchor "center right"
-        :anchor "bottom left"
+        :anchor "center right"
+        ;; :anchor "bottom left"
     )
     (box
         :orientation "v" 
