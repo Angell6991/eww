@@ -28,11 +28,11 @@
             )
         )
         (button 
-            :onclick "bash ~/.config/eww/widget_buttons/scripts/open_metric3.sh" 
+            ;; :onclick "bash ~/.config/eww/widget_buttons/scripts/open_metric3.sh" 
             :class "button-app"
-            :tooltip "Metric3"
+            ;; :tooltip "Metric3"
             (label
-                :class "metric3"
+                :class "machine"
                 :text ""
             )
         )
