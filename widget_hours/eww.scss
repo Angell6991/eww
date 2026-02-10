@@ -14,7 +14,6 @@
 
 .bata_clock_button {
   background: rgba(29, 29, 29, 0);
-  // background-color: rgba(29, 29, 29, 0);
   box-shadow: none;
   border: none;
   border-color: #FFFFFF;
@@ -58,7 +57,6 @@
 
 .bata_day_button {
   background: rgba(29, 29, 29, 0);
-  // background-color: rgba(29, 29, 29, 0);
   box-shadow: none;
   border: none;
   border-color: #FFFFFF;
@@ -113,12 +111,8 @@
 ////    widget_inf_system     ////
 //////////////////////////////////
 
-
-// Definir una variable de color
 $color_01: rgba(29, 29, 29, 0.2);  
-// $color_02: rgba(184, 184, 184); 
 $color_02: rgba(231, 231, 231); 
- 
 
 .box-inf-system {
   background-color: rgba(29, 29, 29, 0.7); 
@@ -129,50 +123,34 @@ $color_02: rgba(231, 231, 231);
 .box-inf-system_01 {
   background-color: $color_01; 
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
+  min-width: 70px;
 }
 
-.battery-label {
-  font-size: 19px;
-  color: $color_02;
-  font-family: "Inconsolata NF";
+.box-inf-system_02 {
+  background-color: $color_01; 
+  border-radius: 10px;
+  padding: 0px;
+  min-width: 80px;
 }
 
-.ram-label {
-  font-size: 17px;
-  color: $color_02;
-  font-family: "Inconsolata NF";
+.glass_box {
+  background: rgba(255, 39, 23, 0);
+  border-radius: 5px;
+  padding: 6px;
 }
 
 .CPU-inf {
-  font-size: 17px;
+  font-size: 16px;
   color: $color_02;
   font-family: "Inconsolata NF";
 }
 
 .CPU-inf-temp {
-  font-size: 17px;
+  font-size: 16px;
   color: $color_02;
   font-family: "Inconsolata NF";
 }
-
-
-//////////////////////////////////
-////-----View_workspaces------////
-//////////////////////////////////
-
-.desk-box_01 {
-  background-color: rgba(29, 29, 29, 0); 
-  padding: 8px;
-  border-radius: 10px; 
-}
-
-.desk-test {
-  font-size: 17px;
-  color: rgba(29, 29, 29);
-  font-family: "Inconsolata NF";
-}
-
 
 //////////////////////////////////
 ////-----View_Separator-------////
